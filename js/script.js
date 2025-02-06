@@ -13,7 +13,7 @@ function lovePhrase(id) {
             console.log("Я люблю тебя на русском");
             return "Я люблю тебя"; // Russian
         case 2:
-            console.log("Я люблю тебя на японском иероглифами");
+            console.log("Я люблю тебя на японском");
             return "愛してる"; // Japanese (kanji)
         case 3:
             console.log("Я люблю тебя на украинском");
@@ -22,7 +22,7 @@ function lovePhrase(id) {
             console.log("Я люблю тебя на французском");
             return "Je t'aime"; // French
         case 5:
-            console.log("Я люблю тебя на китайском иероглифами");
+            console.log("Я люблю тебя на китайском");
             return "我爱你"; // Chinese (Simplified)
         case 6:
             console.log("Я люблю тебя на итальянском");
@@ -31,7 +31,7 @@ function lovePhrase(id) {
             console.log("Я люблю тебя на португальском");
             return "Eu te amo"; // Portuguese
         case 8:
-            console.log("Я люблю тебя на корейском иероглифами");
+            console.log("Я люблю тебя на корейском");
             return "사랑해요"; // Korean (Hangeul)
         case 9:
             console.log("Я люблю тебя на арабском");
@@ -345,6 +345,54 @@ function shakeHeart() {
 
 
 function heartClick() {
+    switch (clickCount) {
+        case 1:
+            console.log("Ты как лучик солнца, освещаешь все вокруг!");
+            break;
+        case 2:
+            console.log("Твоя улыбка — это лучшее, что я видел!");
+            break;
+        case 3:
+            console.log("Твоя доброта и тепло делают мир лучше.");
+            break;
+        case 4:
+            console.log("Ты невероятно умна и красива одновременно!");
+            break;
+        case 5:
+            console.log("В твоих глазах можно утонуть, они такие глубокие и загадочные.");
+            break;
+        case 6:
+            console.log("Ты — настоящий источник вдохновения для меня.");
+            break;
+        case 7:
+            console.log("С тобой даже обычные моменты становятся волшебными.");
+            break;
+        case 8:
+            console.log("Твоя энергия и харизма — это что-то особенное!");
+            break;
+        case 9:
+            console.log("Ты не только прекрасна снаружи, но и внутри.");
+            break;
+        case 10:
+            console.log("Ты создаешь вокруг себя атмосферу счастья и радости.");
+            break;
+        case 11:
+            console.log("Ты — как музыка, которая всегда радует мое сердце.");
+            break;
+        case 12:
+            console.log("Я восхищаюсь твоей силой и уверенностью.");
+            break;
+        case 13:
+            console.log("Каждый твой взгляд — это как волшебство, которое меня очаровывает.");
+            break;
+        case 14:
+            console.log("Ты — самое ценное, что произошло в моей жизни!");
+            break;
+        default:
+            console.log("Ты потрясающая, и я горжусь, что знаю тебя!");
+    }
+    
+    
     svgElement.style.transition = "transform 0.2s ease-in-out";
     svgElement.style.transform = `scale(${HeartScaleBeat})`;
     svgElement.style.filter = `grayscale(${HeartGray})`;
