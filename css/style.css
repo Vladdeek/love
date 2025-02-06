@@ -18,7 +18,8 @@ body {
 
 .svg-large-img {
     color:  #E4717A;
-    width: 0%;
+    width: 100%;
+    transform: scale(0);
     max-width: 800px;
     display: flex;
     justify-content: center;
@@ -41,4 +42,16 @@ body {
     opacity: 0;
     transition: 0.5s;
 }
-
+.hp{
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    color:white;
+    font-size: 64px;
+    z-index: 18;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    transition: 0.5s;
+    opacity: 0;
+}
