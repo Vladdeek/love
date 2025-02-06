@@ -165,8 +165,10 @@ function heartClick() {
 
 function boom() {
     text.style.display = "flex";
+    hp.style.display = "none";
     setTimeout(() => {
         text.style.opacity = "1";
+        hp.style.opacity = "0";
     }, 250);
     const mainHeart = document.querySelector('.svg-large-img svg');
     const container = document.querySelector('.svg-large-img');
