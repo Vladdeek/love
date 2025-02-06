@@ -1,219 +1,328 @@
 let svgElement = document.querySelector('.svg-large-img');
+let text = document.querySelector('.LovePhrase');
 let clickCount = 0
 let HeartScaleBeat = 1.025
 let HeartScale = 1.0
 let HeartGray = 1.0
 let textopacity = 1.0
+let idPhrase = 0
 
 function lovePhrase(id) {
     switch (id) {
         case 1:
+            console.log("Я люблю тебя на русском");
             return "Я люблю тебя"; // Russian
         case 2:
-            return "I love you"; // English
+            console.log("Я люблю тебя на японском иероглифами");
+            return "愛してる"; // Japanese (kanji)
         case 3:
-            return "Je t'aime"; // French
+            console.log("Я люблю тебя на украинском");
+            return "Я тебе люблю"; // Ukrainian
         case 4:
-            return "Te quiero"; // Spanish
+            console.log("Я люблю тебя на французском");
+            return "Je t'aime"; // French
         case 5:
-            return "Ti amo"; // Italian
+            console.log("Я люблю тебя на китайском иероглифами");
+            return "我爱你"; // Chinese (Simplified)
         case 6:
-            return "Ich liebe dich"; // German
+            console.log("Я люблю тебя на итальянском");
+            return "Ti amo"; // Italian
         case 7:
+            console.log("Я люблю тебя на португальском");
             return "Eu te amo"; // Portuguese
         case 8:
-            return "Te iubesc"; // Romanian
+            console.log("Я люблю тебя на корейском иероглифами");
+            return "사랑해요"; // Korean (Hangeul)
         case 9:
-            return "Aishiteru"; // Japanese
+            console.log("Я люблю тебя на арабском");
+            return "أحبك"; // Arabic
         case 10:
-            return "Saranghae"; // Korean
+            console.log("Я люблю тебя на испанском");
+            return "Te quiero"; // Spanish
         case 11:
-            return "Wo ai ni"; // Chinese (Mandarin)
+            console.log("Я люблю тебя на немецком");
+            return "Ich liebe dich"; // German
         case 12:
-            return "Mahal kita"; // Filipino
+            console.log("Я люблю тебя на итальянском");
+            return "Ti voglio bene"; // Italian (alternative)
         case 13:
-            return "Saya cinta padamu"; // Malay
+            console.log("Я люблю тебя на хинди");
+            return "मैं तुमसे प्यार करता हूँ"; // Hindi
         case 14:
-            return "Jeg elsker dig"; // Danish
-        case 15:
-            return "Jeg elsker deg"; // Norwegian
-        case 16:
-            return "Amo-te"; // Galician
-        case 17:
-            return "Ik hou van jou"; // Dutch
-        case 18:
+            console.log("Я люблю тебя на польском");
             return "Kocham cię"; // Polish
-        case 19:
-            return "Eu te amo muito"; // Portuguese (Brazil)
-        case 20:
-            return "Tôi yêu bạn"; // Vietnamese
-        case 21:
-            return "Lubię cię"; // Polish (informal)
-        case 22:
-            return "Bhāvāni ki premī chu"; // Hindi
-        case 23:
-            return "Kimi wo ai shiteru"; // Japanese (alternative)
-        case 24:
-            return "Men te xhobha"; // Xhosa
-        case 25:
-            return "Walang makakapantay sa aking pagmamahal"; // Filipino (long version)
-        case 26:
-            return "Nashim ishq karte hain"; // Urdu
-        case 27:
-            return "Kocham cię bardzo"; // Polish (intense)
-        case 28:
-            return "Mi amas vin"; // Esperanto
-        case 29:
-            return "Eres mi amor"; // Spanish (informal)
-        case 30:
+        case 15:
+            console.log("Я люблю тебя на румынском");
+            return "Te iubesc"; // Romanian
+        case 16:
+            console.log("Я люблю тебя на шведском");
+            return "Jag älskar dig"; // Swedish
+        case 17:
+            console.log("Я люблю тебя на норвежском");
+            return "Jeg elsker deg"; // Norwegian
+        case 18:
+            console.log("Я люблю тебя на венгерском");
             return "Szeretlek"; // Hungarian
+        case 19:
+            console.log("Я люблю тебя на финском");
+            return "Rakastan sinua"; // Finnish
+        case 20:
+            console.log("Я люблю тебя на датском");
+            return "Jeg elsker dig"; // Danish
+        case 21:
+            console.log("Я люблю тебя на греческом");
+            return "Σ' αγαπώ"; // Greek
+        case 22:
+            console.log("Я люблю тебя на турецком");
+            return "Seni seviyorum"; // Turkish
+        case 23:
+            console.log("Я люблю тебя на чешском");
+            return "Miluji tě"; // Czech
+        case 24:
+            console.log("Я люблю тебя на болгарском");
+            return "Обичам те"; // Bulgarian
+        case 25:
+            console.log("Я люблю тебя на японском");
+            return "愛してるよ"; // Japanese (alternative)
+        case 26:
+            console.log("Я люблю тебя на финском");
+            return "Rakastan sinua"; // Finnish
+        case 27:
+            console.log("Я люблю тебя на латинском");
+            return "Te amo"; // Latin
+        case 28:
+            console.log("Я люблю тебя на португальском (Бразилия)");
+            return "Eu te amo muito"; // Brazilian Portuguese
+        case 29:
+            console.log("Я люблю тебя на иврите");
+            return "אני אוהב אותך"; // Hebrew
+        case 30:
+            console.log("Я люблю тебя на индонезийском");
+            return "Aku cinta padamu"; // Indonesian
         case 31:
-            return "Te espero"; // Spanish (informal, poetic)
+            console.log("Я люблю тебя на малайском");
+            return "Saya cinta padamu"; // Malay
         case 32:
-            return "Wita ku" // Belarusian
+            console.log("Я люблю тебя на вьетнамском");
+            return "Anh yêu em"; // Vietnamese
         case 33:
-            return "Ég elska tig"; // Icelandic
+            console.log("Я люблю тебя на сингапурском");
+            return "I love you, my friend"; // English (informal)
         case 34:
-            return "Ndinokuda"; // Shona
+            console.log("Я люблю тебя на бенгальском");
+            return "আমি তোমায় ভালোবাসি"; // Bengali
         case 35:
-            return "Saya sangat mencintaimu"; // Malay (strong version)
+            console.log("Я люблю тебя на урду");
+            return "میں تم سے محبت کرتا ہوں"; // Urdu
         case 36:
-            return "Håkjem med deg"; // Norwegian (alternative)
+            console.log("Я люблю тебя на тайском");
+            return "รักคุณ"; // Thai
         case 37:
-            return "Eshqim seninle"; // Turkish
+            console.log("Я люблю тебя на монгольском");
+            return "Би чамд хайртай"; // Mongolian
         case 38:
-            return "Nina nkonda"; // Bemba
+            console.log("Я люблю тебя на грузинском");
+            return "მიყვარხარ"; // Georgian
         case 39:
-            return "Ek mohamet"; // Afrikaans
+            console.log("Я люблю тебя на казахском");
+            return "Мен сені жақсы көремін"; // Kazakh
         case 40:
-            return "Amo ya"; // Swahili
+            console.log("Я люблю тебя на армянском");
+            return "Ես սիրում եմ քեզ"; // Armenian
         case 41:
-            return "Des te amou"; // Portuguese (regional)
+            console.log("Я люблю тебя на узбекском");
+            return "Men seni sevaman"; // Uzbek
         case 42:
-            return "Të dua"; // Albanian
+            console.log("Я люблю тебя на суахили");
+            return "Nakupenda"; // Swahili
         case 43:
-            return "Szeretlek téged"; // Hungarian (longer)
+            console.log("Я люблю тебя на африкаанс");
+            return "Ek het jou lief"; // Afrikaans
         case 44:
-            return "Tote voyo se"; // Hindi (alternative)
+            console.log("Я люблю тебя на эсперанто");
+            return "Mi amas vin"; // Esperanto
         case 45:
-            return "Mahal kita ng sobra"; // Filipino (emphatic)
+            console.log("Я люблю тебя на латвийском");
+            return "Es tevi miilu"; // Latvian
         case 46:
-            return "Yêu anh"; // Vietnamese (informal)
+            console.log("Я люблю тебя на литовском");
+            return "Aš tave myliu"; // Lithuanian
         case 47:
-            return "Nyarong lan tege"; // Uzbek
+            console.log("Я люблю тебя на эстонском");
+            return "Ma armastan sind"; // Estonian
         case 48:
-            return "Akhoba ve"; // Tamil
+            console.log("Я люблю тебя на малгашском");
+            return "Tiako anao"; // Malagasy
         case 49:
-            return "Ohayou gozaimasu, aishiteru"; // Japanese (formal)
+            console.log("Я люблю тебя на суахили");
+            return "Ninapenda"; // Swahili
         case 50:
-            return "Jeziwe nkunda"; // Zulu
+            console.log("Я люблю тебя на самoanском");
+            return "O le alofa ia te oe"; // Samoan
         case 51:
-            return "Ai shiteru"; // Japanese
+            console.log("Я люблю тебя на финском");
+            return "Rakastan sinua"; // Finnish
         case 52:
-            return "Laa kinneh"; // Tajik
+            console.log("Я люблю тебя на хмонг");
+            return "Kuv hlub koj"; // Hmong
         case 53:
-            return "Solu kèbè ni"; // French Creole
+            console.log("Я люблю тебя на тунгусском");
+            return "Mi ya asko"; // Tunguska
         case 54:
-            return "Ñañdu romi"; // Fulani
+            console.log("Я люблю тебя на кубинском");
+            return "Te quiero mucho"; // Cuban Spanish
         case 55:
-            return "Ai de tu"; // Chinese (Cantonese)
+            console.log("Я люблю тебя на гэльском");
+            return "Tha gaol agam ort"; // Scottish Gaelic
         case 56:
+            console.log("я люблю тебя на Гавайском");
             return "Iola plehe ki"; // Hawaiian
         case 57:
+            console.log("я люблю тебя на румынском");
             return "Vă iubesc"; // Romanian
         case 58:
+            console.log("я люблю тебя на Гавайском");
             return "Nodi aei te"; // Hawaiian
         case 59:
+            console.log("я люблю тебя на французском");
             return "J'aimerais te dire que je t'aime"; // French (full sentence)
         case 60:
+            console.log("я люблю тебя на испанском");
             return "Te amo mucho"; // Spanish (intense)
         case 61:
+            console.log("я люблю тебя на Гавайском");
             return "Aloha wau ia'oe"; // Hawaiian
         case 62:
+            console.log("я люблю тебя на английском");
             return "I love you, my friend"; // English (informal)
         case 63:
+            console.log("я люблю тебя на игбо");
             return "Azi n'anya"; // Igbo
         case 64:
+            console.log("я люблю тебя на болгарском");
             return "Lubavna te"; // Bulgarian
         case 65:
+            console.log("я люблю тебя на гаитянском креольском");
             return "Te twal love"; // Haitian Creole
         case 66:
+            console.log("я люблю тебя на французском");
             return "J'éprouve de l'amour"; // French (formal)
         case 67:
+            console.log("я люблю тебя на грузинском");
             return "Länem aman"; // Georgian
         case 68:
+            console.log("я люблю тебя на словацком");
             return "Lubim te"; // Slovak
         case 69:
+            console.log("я люблю тебя на чичеве");
             return "Bohýhumi sa boci"; // Chichewa
         case 70:
+            console.log("я люблю тебя на чичеве");
             return "Ndimakukonda"; // Chichewa
         case 71:
+            console.log("я люблю тебя на самоанском");
             return "Taimo naʻe maʻu"; // Samoan
         case 72:
+            console.log("я люблю тебя на албанском");
             return "Muzi rebu"; // Albanian
         case 73:
+            console.log("я люблю тебя на испанском");
             return "Te amo mucho, siempre"; // Spanish (very strong)
         case 74:
+            console.log("я люблю тебя на хауса");
             return "An yu"; // Hausa
         case 75:
+            console.log("я люблю тебя на албанском");
             return "Georgetra un me"; // Albanian
         case 76:
+            console.log("я люблю тебя на суахили");
             return "Lantwiro te"; // Swahili
         case 77:
+            console.log("я люблю тебя на санскрите");
             return "O noni te"; // Sanskrit
         case 78:
+            console.log("я люблю тебя на маори");
             return "Mo re moa"; // Maori
         case 79:
+            console.log("я люблю тебя на кикую");
             return "Lugundu uhora"; // Kikuyu
         case 80:
+            console.log("я люблю тебя на тайском");
             return "Maliishka senatsoni"; // Thai
         case 81:
+            console.log("я люблю тебя на французском");
             return "Jétè moj"; // French
         case 82:
+            console.log("я люблю тебя на малагасийском");
             return "Saha ko'wa"; // Malagasy
         case 83:
+            console.log("я люблю тебя на йоруба");
             return "Si túo ha lo ri"; // Yoruba
         case 84:
+            console.log("я люблю тебя на эве");
             return "Dune kudo"; // Ewe
         case 85:
+            console.log("я люблю тебя на узбекском");
             return "Serjangi zhi"; // Uzbek
         case 86:
+            console.log("я люблю тебя на тсвана");
             return "O kórè si"; // Tswana
         case 87:
+            console.log("я люблю тебя на чичеве");
             return "Tête idakwana"; // Chichewa
         case 88:
+            console.log("я люблю тебя на ксоса");
             return "Njivwela kwa nke"; // Xhosa
         case 89:
+            console.log("я люблю тебя на сото");
             return "Belo yi zo'fu"; // Sotho
         case 90:
+            console.log("я люблю тебя на суахили");
             return "Mukoli ewo"; // Kiswahili
         case 91:
-            return "Boji wa'i" // Kinyarwanda
+            console.log("я люблю тебя на киньяруанда");
+            return "Boji wa'i"; // Kinyarwanda
         case 92:
-            return "Tsiti amezi" // Twi
+            console.log("я люблю тебя на тви");
+            return "Tsiti amezi"; // Twi
         case 93:
-            return "Ihobaho wa'tse" // Tswana
+            console.log("я люблю тебя на тсвана");
+            return "Ihobaho wa'tse"; // Tswana
         case 94:
-            return "G'ładź ti pija" // Croatian
+            console.log("я люблю тебя на хорватском");
+            return "G'ładź ti pija"; // Croatian
         case 95:
-            return "Mu fi woin" // Shona
+            console.log("я люблю тебя на шона");
+            return "Mu fi woin"; // Shona
         case 96:
-            return "Jezi mwihi" // Kikuyu
+            console.log("я люблю тебя на кикую");
+            return "Jezi mwihi"; // Kikuyu
         case 97:
-            return "Nakara a'ahu" // Malagasy
+            console.log("я люблю тебя на малагасийском");
+            return "Nakara a'ahu"; // Malagasy
         case 98:
-            return "Zavoti da kosefa" // Hausa
+            console.log("я люблю тебя на хауса");
+            return "Zavoti da kosefa"; // Hausa
         case 99:
-            return "Yajumba ummido" // Zulu
+            console.log("я люблю тебя на зулу");
+            return "Yajumba ummido"; // Zulu
         case 100:
-            return "Vibrajo fa yeboke" // Bemba
+            console.log("я люблю тебя на бемба");
+            return "Vibrajo fa yeboke"; // Bemba
         default:
             return "I love you";
     }
 }
 
+function changeLovePhrase() {
+    const lovePhraseElement = document.querySelector('.LovePhrase');
+    
+    if (lovePhraseElement) {
+        lovePhraseElement.textContent = lovePhrase(idPhrase);
+    }
+}
+
 function shakeHeart() {
-    const svgElement = document.querySelector('.svg-large-img');
     svgElement.style.transition = "transform 0.1s ease-in-out";
     svgElement.style.transform = "rotate(-4deg)";
 
@@ -260,6 +369,10 @@ function heartClick() {
 
 
 function boom() {
+    text.style.display = "flex";
+    setTimeout(() => {
+        text.style.opacity = "1";
+    }, 250);
     const mainHeart = document.querySelector('.svg-large-img svg');
     const container = document.querySelector('.svg-large-img');
 
@@ -288,7 +401,7 @@ function boom() {
         // Добавляем путь сердца
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
         path.setAttribute("d", "M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z");
-        path.setAttribute("fill", " #CA0147");
+        path.setAttribute("fill", " #E4717A");
 
         heart.appendChild(path);
         document.body.appendChild(heart);
@@ -318,6 +431,8 @@ function boom() {
 
 
 function boomAtClick(event) {
+    changeLovePhrase(idPhrase)
+    idPhrase++
     // Создание 100 маленьких сердец
     for (let i = 0; i < 51; i++) {
         const heart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -339,7 +454,7 @@ function boomAtClick(event) {
         // Добавляем путь сердца
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
         path.setAttribute("d", "M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z");
-        path.setAttribute("fill", " #CA0147");
+        path.setAttribute("fill", " #E4717A");
 
         heart.appendChild(path);
         document.body.appendChild(heart);

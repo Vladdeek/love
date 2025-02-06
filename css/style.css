@@ -10,14 +10,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Meow Script", serif;
+    font-family: "Pacifico", serif;
     font-weight: 400;
     font-style: normal;
     background-color: #FDF4E3;
 }
 
 .svg-large-img {
-    color:  #CA0147;
+    color:  #E4717A;
     width: 0%;
     max-width: 800px;
     display: flex;
@@ -27,16 +27,18 @@ body {
     cursor: pointer;
     filter: grayscale(1);
 }
-p{
-    display: flex;
+.LovePhrase{
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
-    color: white;
-    font-size: 86px;
+    color:#CA0147;
+    font-size: 64px;
     z-index: 18;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    opacity: 0;
+    transition: 0.5s;
 }
 
