@@ -181,7 +181,7 @@ function boom() {
     for (let i = 0; i < 101; i++) {
         const heart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         heart.setAttribute("viewBox", "0 0 24 24");
-        heart.setAttribute("fill", "currentColor");
+        heart.setAttribute("fill", "#E4717A");
         heart.setAttribute("xmlns", "http://www.w3.org/2000/svg");
         
         const size = 75 + Math.random() * 75;
@@ -193,7 +193,7 @@ function boom() {
         heart.style.transform = "translate(-50%, -50%)";
         heart.style.opacity = "1";
         heart.style.transition = `transform ${0.5 + Math.random()}s ease-out, opacity ${0.5 + Math.random()}s ease-out`;
-        heart.style.filter = `brightness(${0.5 + Math.random() * 0.5})`;
+        heart.style.filter = `brightness(${0.75 + Math.random() * 0.75})`;
 
         // Добавляем путь сердца
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -234,7 +234,7 @@ function boomAtClick(event) {
     for (let i = 0; i < 51; i++) {
         const heart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         heart.setAttribute("viewBox", "0 0 24 24");
-        heart.setAttribute("fill", "currentColor");
+        heart.setAttribute("fill", "#E4717A");
         heart.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 
         const size = 25 + Math.random() * 25;
@@ -246,7 +246,7 @@ function boomAtClick(event) {
         heart.style.transform = "translate(-50%, -50%)";
         heart.style.opacity = "1";
         heart.style.transition = `transform ${0.5 + Math.random()}s ease-out, opacity ${0.5 + Math.random()}s ease-out`;
-        heart.style.filter = `brightness(${0.5 + Math.random() * 0.5})`;
+        heart.style.filter = `brightness(${0.75 + Math.random() * 0.75})`;
 
         // Добавляем путь сердца
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
