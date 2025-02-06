@@ -5,6 +5,213 @@ let HeartScale = 1.0
 let HeartGray = 1.0
 let textopacity = 1.0
 
+function lovePhrase(id) {
+    switch (id) {
+        case 1:
+            return "Я люблю тебя"; // Russian
+        case 2:
+            return "I love you"; // English
+        case 3:
+            return "Je t'aime"; // French
+        case 4:
+            return "Te quiero"; // Spanish
+        case 5:
+            return "Ti amo"; // Italian
+        case 6:
+            return "Ich liebe dich"; // German
+        case 7:
+            return "Eu te amo"; // Portuguese
+        case 8:
+            return "Te iubesc"; // Romanian
+        case 9:
+            return "Aishiteru"; // Japanese
+        case 10:
+            return "Saranghae"; // Korean
+        case 11:
+            return "Wo ai ni"; // Chinese (Mandarin)
+        case 12:
+            return "Mahal kita"; // Filipino
+        case 13:
+            return "Saya cinta padamu"; // Malay
+        case 14:
+            return "Jeg elsker dig"; // Danish
+        case 15:
+            return "Jeg elsker deg"; // Norwegian
+        case 16:
+            return "Amo-te"; // Galician
+        case 17:
+            return "Ik hou van jou"; // Dutch
+        case 18:
+            return "Kocham cię"; // Polish
+        case 19:
+            return "Eu te amo muito"; // Portuguese (Brazil)
+        case 20:
+            return "Tôi yêu bạn"; // Vietnamese
+        case 21:
+            return "Lubię cię"; // Polish (informal)
+        case 22:
+            return "Bhāvāni ki premī chu"; // Hindi
+        case 23:
+            return "Kimi wo ai shiteru"; // Japanese (alternative)
+        case 24:
+            return "Men te xhobha"; // Xhosa
+        case 25:
+            return "Walang makakapantay sa aking pagmamahal"; // Filipino (long version)
+        case 26:
+            return "Nashim ishq karte hain"; // Urdu
+        case 27:
+            return "Kocham cię bardzo"; // Polish (intense)
+        case 28:
+            return "Mi amas vin"; // Esperanto
+        case 29:
+            return "Eres mi amor"; // Spanish (informal)
+        case 30:
+            return "Szeretlek"; // Hungarian
+        case 31:
+            return "Te espero"; // Spanish (informal, poetic)
+        case 32:
+            return "Wita ku" // Belarusian
+        case 33:
+            return "Ég elska tig"; // Icelandic
+        case 34:
+            return "Ndinokuda"; // Shona
+        case 35:
+            return "Saya sangat mencintaimu"; // Malay (strong version)
+        case 36:
+            return "Håkjem med deg"; // Norwegian (alternative)
+        case 37:
+            return "Eshqim seninle"; // Turkish
+        case 38:
+            return "Nina nkonda"; // Bemba
+        case 39:
+            return "Ek mohamet"; // Afrikaans
+        case 40:
+            return "Amo ya"; // Swahili
+        case 41:
+            return "Des te amou"; // Portuguese (regional)
+        case 42:
+            return "Të dua"; // Albanian
+        case 43:
+            return "Szeretlek téged"; // Hungarian (longer)
+        case 44:
+            return "Tote voyo se"; // Hindi (alternative)
+        case 45:
+            return "Mahal kita ng sobra"; // Filipino (emphatic)
+        case 46:
+            return "Yêu anh"; // Vietnamese (informal)
+        case 47:
+            return "Nyarong lan tege"; // Uzbek
+        case 48:
+            return "Akhoba ve"; // Tamil
+        case 49:
+            return "Ohayou gozaimasu, aishiteru"; // Japanese (formal)
+        case 50:
+            return "Jeziwe nkunda"; // Zulu
+        case 51:
+            return "Ai shiteru"; // Japanese
+        case 52:
+            return "Laa kinneh"; // Tajik
+        case 53:
+            return "Solu kèbè ni"; // French Creole
+        case 54:
+            return "Ñañdu romi"; // Fulani
+        case 55:
+            return "Ai de tu"; // Chinese (Cantonese)
+        case 56:
+            return "Iola plehe ki"; // Hawaiian
+        case 57:
+            return "Vă iubesc"; // Romanian
+        case 58:
+            return "Nodi aei te"; // Hawaiian
+        case 59:
+            return "J'aimerais te dire que je t'aime"; // French (full sentence)
+        case 60:
+            return "Te amo mucho"; // Spanish (intense)
+        case 61:
+            return "Aloha wau ia'oe"; // Hawaiian
+        case 62:
+            return "I love you, my friend"; // English (informal)
+        case 63:
+            return "Azi n'anya"; // Igbo
+        case 64:
+            return "Lubavna te"; // Bulgarian
+        case 65:
+            return "Te twal love"; // Haitian Creole
+        case 66:
+            return "J'éprouve de l'amour"; // French (formal)
+        case 67:
+            return "Länem aman"; // Georgian
+        case 68:
+            return "Lubim te"; // Slovak
+        case 69:
+            return "Bohýhumi sa boci"; // Chichewa
+        case 70:
+            return "Ndimakukonda"; // Chichewa
+        case 71:
+            return "Taimo naʻe maʻu"; // Samoan
+        case 72:
+            return "Muzi rebu"; // Albanian
+        case 73:
+            return "Te amo mucho, siempre"; // Spanish (very strong)
+        case 74:
+            return "An yu"; // Hausa
+        case 75:
+            return "Georgetra un me"; // Albanian
+        case 76:
+            return "Lantwiro te"; // Swahili
+        case 77:
+            return "O noni te"; // Sanskrit
+        case 78:
+            return "Mo re moa"; // Maori
+        case 79:
+            return "Lugundu uhora"; // Kikuyu
+        case 80:
+            return "Maliishka senatsoni"; // Thai
+        case 81:
+            return "Jétè moj"; // French
+        case 82:
+            return "Saha ko'wa"; // Malagasy
+        case 83:
+            return "Si túo ha lo ri"; // Yoruba
+        case 84:
+            return "Dune kudo"; // Ewe
+        case 85:
+            return "Serjangi zhi"; // Uzbek
+        case 86:
+            return "O kórè si"; // Tswana
+        case 87:
+            return "Tête idakwana"; // Chichewa
+        case 88:
+            return "Njivwela kwa nke"; // Xhosa
+        case 89:
+            return "Belo yi zo'fu"; // Sotho
+        case 90:
+            return "Mukoli ewo"; // Kiswahili
+        case 91:
+            return "Boji wa'i" // Kinyarwanda
+        case 92:
+            return "Tsiti amezi" // Twi
+        case 93:
+            return "Ihobaho wa'tse" // Tswana
+        case 94:
+            return "G'ładź ti pija" // Croatian
+        case 95:
+            return "Mu fi woin" // Shona
+        case 96:
+            return "Jezi mwihi" // Kikuyu
+        case 97:
+            return "Nakara a'ahu" // Malagasy
+        case 98:
+            return "Zavoti da kosefa" // Hausa
+        case 99:
+            return "Yajumba ummido" // Zulu
+        case 100:
+            return "Vibrajo fa yeboke" // Bemba
+        default:
+            return "I love you";
+    }
+}
+
 function shakeHeart() {
     const svgElement = document.querySelector('.svg-large-img');
     svgElement.style.transition = "transform 0.1s ease-in-out";
