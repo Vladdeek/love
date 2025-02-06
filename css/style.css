@@ -15,6 +15,7 @@ body {
     font-style: normal;
     background-color: #FDF4E3;
     overflow: hidden;
+    transition: 1s;
 }
 
 .svg-large-img {
@@ -31,28 +32,24 @@ body {
 }
 .LovePhrase{
     display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
     color:#CA0147;
-    font-size: 64px;
-    z-index: 18;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    opacity: 0;
-    transition: 0.5s;
 }
 .hp{
+    color:white;
+}
+.text{
+    
+}
+p{
     justify-content: center;
     align-items: center;
     position: fixed;
-    color:white;
-    font-size: 64px;
-    z-index: 18;
+    text-align: center;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    transition: 0.5s;
+    font-size: 64px;
+    z-index: 18;
     opacity: 0;
+    transition: 0.5s;
 }

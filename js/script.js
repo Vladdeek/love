@@ -228,8 +228,16 @@ function boom() {
 
 
 function boomAtClick(event) {
-    idPhrase++
-    changeLovePhrase(idPhrase)
+    if (idPhrase >= 14){
+        text.style.opacity = "0";
+        document.body.style.backgroundColor = "black";
+        setTimeout(() => {
+            window.location.href = 'factpage.html';
+        }, 800);
+    } else {
+        idPhrase++
+        changeLovePhrase(idPhrase)
+    }
     // Создание 100 маленьких сердец
     for (let i = 0; i < 51; i++) {
         const heart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
