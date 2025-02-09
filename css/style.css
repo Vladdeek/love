@@ -1,52 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Pacifico", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #FDF4E3;
-    overflow: hidden;
-    transition: 1s;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Pacifico', serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #fdf4e3;
+	overflow: hidden;
+	transition: 1s;
 }
 
-.svg-large-img {
-    color:  #E4717A;
-    width: 100%;
-    transform: scale(0);
-    max-width: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    cursor: pointer;
-    filter: grayscale(1);
+.svg-large-img svg {
+	color: #e4717a;
+	width: 100%;
+	max-width: 800px;
+	display: flex; /* Убедимся, что элемент видим */
+	justify-content: center;
+	align-items: center;
+	opacity: 0.01;
+	transform: scale(0.01);
+	cursor: pointer;
+	filter: grayscale(1);
+	will-change: transform, opacity;
 }
-.LovePhrase{
-    display: none;
-    color:#CA0147;
+.LovePhrase {
+	display: none;
+	color: #ca0147;
 }
-.hp{
-    color:white;
+.hp {
+	color: white;
 }
-p{
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    font-size: 64px;
-    z-index: 18;
-    opacity: 0;
-    transition: 0.5s;
+p {
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	font-size: 64px;
+	z-index: 18;
+	opacity: 0;
+	transition: 0.5s;
 }
