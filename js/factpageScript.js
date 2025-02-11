@@ -70,9 +70,23 @@ document.addEventListener('click', function () {
 				break
 			case 15:
 				document.getElementById('img').style.display = 'none'
-				textContainer.style.transform = 'translateY(0%)'
+				document.getElementById('code').style.display = 'flex'
+				document.getElementById('code').src = 'image/code.png'
 				textContainer.textContent =
-					'Это веб-приложение для моей женщины, автор этого веб-приложения Я, Рязанов В., ПОШЛИ НАХ ВОРЮГИ'
+					'Эта функция, ну типа, делает одну штуку — генерирует и случайным образом двигает сердечки и всё на математике'
+				textContainer.style.transform = 'translateY(55%)'
+				console.log('я люблю тебя')
+				break
+			case 16:
+				document.getElementById('code').style.display = 'none'
+				textContainer.style.transform = 'translateY(0%)'
+				textContainer.textContent = ''
+				console.log('я люблю тебя')
+				break
+			case 17:
+				textContainer.textContent =
+					'Это веб-приложение ВАЛЕНТИНКА для Кристюши на 14 февраля. \nАвтор этого веб-приложения Рязанов В.'
+				console.log('я люблю тебя')
 				break
 		}
 		textContainer.style.opacity = '1'

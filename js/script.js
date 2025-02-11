@@ -243,7 +243,6 @@ function boomAtClick(event) {
 		idPhrase++
 		changeLovePhrase(idPhrase)
 	}
-	// Создание 100 маленьких сердец
 	for (let i = 0; i < 51; i++) {
 		const heart = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 		heart.setAttribute('viewBox', '0 0 24 24')
@@ -263,7 +262,6 @@ function boomAtClick(event) {
 		}s ease-out, opacity ${0.5 + Math.random()}s ease-out`
 		heart.style.filter = `brightness(${0.75 + Math.random() * 0.75})`
 
-		// Добавляем путь сердца
 		const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
 		path.setAttribute(
 			'd',
@@ -284,8 +282,6 @@ function boomAtClick(event) {
 			heart.style.transform = `translate(${x}px, ${y}px) scale(0)`
 			heart.style.opacity = '0'
 		}, 10)
-
-		// Удаление маленького сердца после анимации
 		setTimeout(() => {
 			heart.remove()
 		}, 1500)
